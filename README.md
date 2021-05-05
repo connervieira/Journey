@@ -5,7 +5,7 @@ A crowd-sourced static road hazard finder
 
 ## Disclaimer
 
-Moop is currently very early in development. Everything you read here is subject to change. Moop is currently just a proof of concept, and is fairly impractical for real world use. Always pay attention to the road and your surroundings while driving, and never depend on a piece of software to replace your own descretion and decision making.
+Moop is currently very early in development. Everything you read here is subject to change. Moop is currently just a proof of concept, and is fairly impractical for real world use. Always pay attention to the road and your surroundings while driving, and never depend on a piece of software to replace your own discretion and decision making.
 
 
 ## Description
