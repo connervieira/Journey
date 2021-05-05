@@ -19,5 +19,7 @@
         ?>
         <h1>Sign Out</h1>
         <h3>You have signed out of your Moop account!</h3>
+        <a class="button" href="./signin.php">Sign In</a>
+        <a class="button" href="./index.php">Main Page</a>
     </body>
 </html>
