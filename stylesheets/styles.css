@@ -17,3 +17,10 @@ a {
     border-radius: 5px;
 }
 
+.error {
+    color: #ff6666;
+}
+
+.success {
+    color: #66ff66;
+}

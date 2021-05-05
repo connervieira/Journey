@@ -1,0 +1,1 @@
+a:1:{s:7:"cvieira";a:1:{s:8:"password";s:60:"$2y$10$8OBT6I8d5JFPVYEFa424CuRkvAmAIeb3BRwv.75LGz1v2gfgyziCO";}}
