@@ -1,6 +1,6 @@
 # Moop
 
-A crowd sourced road hazard finder
+A crowd-sourced static road hazard finder
 
 
 ## Disclaimer
