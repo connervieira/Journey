@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Moop - Sign Up</title>
+        <title>Journey - Sign Up</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
 
         session_start(); // Start a PHP session.
         if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signed in.
-            echo "<p class='error'>You're already signed in to Moop as " . $_SESSION["username"] . "!</p>";
+            echo "<p class='error'>You're already signed in to Journey as " . $_SESSION["username"] . "!</p>";
 
         } else if (variable_exists($username)) { // Check to see if the user has entered a username.
             if (variable_exists($password1)) { // Check to see if the user has enter a password.
@@ -29,7 +29,7 @@
                             $account_database[$username]["password"] = password_hash($password1, PASSWORD_DEFAULT); // Add the username and password to the database.
                             file_put_contents('./accountDatabase.txt', serialize($account_database)); // Save the database to the disk.
 
-                            echo "<p class='success'>You've successfully created a Moop account! Please log in to continue.</p>
+                            echo "<p class='success'>You've successfully created a Journey account! Please log in to continue.</p>
                             <br>
                             <a class='button' href='./signin.php'>Sign In</a>";
                         } else {
@@ -49,14 +49,14 @@
                     <a class='button' href='./signup.php'>Back</a>";
                 }
             } else {
-                echo "<p class='error'>You've entered a username but not a password! Please provide a password you'd like to use to log in to your Moop account.</p>
+                echo "<p class='error'>You've entered a username but not a password! Please provide a password you'd like to use to log in to your Journey account.</p>
                 <br>
                 <a class='button' href='./signup.php'>Back</a>";
             }
         } else {
             echo '
             <h1>Sign Up</h1>
-            <h3>Sign up for a Moop account to report road hazards!</h3>
+            <h3>Sign up for a Journey account to report road hazards!</h3>
             <form method="POST">
                 <input placeholder="Username" name="username"><br><br>
                 <input placeholder="Password" name="password1" type="password"><br><br>

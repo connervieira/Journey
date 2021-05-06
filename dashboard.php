@@ -9,7 +9,7 @@ if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signe
 ?>
 <html lang="en">
     <head>
-        <title>Moop - Dashboard</title>
+        <title>Journey - Dashboard</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
         <link href="./stylesheets/buttons.css" rel="stylesheet">
 

@@ -15,7 +15,7 @@ function load_database($database_to_load) {
             file_put_contents($database_to_load, serialize(array())); // Create a database file with an empty array and write it to the disk.
             return array(); // Load an empty array.
         } else {
-            echo "<p class='error'>The Moop folder is not writable by PHP. This is a technical error. Please contact a site admin to make them aware of this issue.</p>"; // Throw an error if the Moop directory isn't writable by PHP.
+            echo "<p class='error'>The Journey folder is not writable by PHP. This is a technical error. Please contact a site admin to make them aware of this issue.</p>"; // Throw an error if the Moop directory isn't writable by PHP.
             exit();
         }
     }

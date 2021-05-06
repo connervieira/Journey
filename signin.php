@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Moop - Sign In</title>
+        <title>Journey - Sign In</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
 
         session_start(); // Start a PHP session.
         if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signed in.
-            echo "<p class='error'>You're already signed in to Moop as " . $_SESSION["username"] . "!</p>";
+            echo "<p class='error'>You're already signed in to Journey as " . $_SESSION["username"] . "!</p>";
 
         } else if (variable_exists($username)) { // Check to see if the user has entered a username to log in to.
             if (variable_exists($password)) { // Check to see if the user has entered a password.
@@ -27,7 +27,7 @@
                         session_start(); // Start a new PHP session.
                         $_SESSION['loggedin'] = 1; // Set the type of account signed in in the PHP session.
                         $_SESSION['username'] = $username; // Set the current username in the PHP session.
-                        echo "<p class='success'>You've successfully signed into your Moop account!</p>
+                        echo "<p class='success'>You've successfully signed into your Journey account!</p>
                         <br>
                         <a class='button' href='./account.php'>Continue To Account</a>";
                     } else {
@@ -47,7 +47,7 @@
         } else {
             echo '
             <h1>Sign In</h1>
-            <h3>Sign in to your Moop account to report road hazards!</h3>
+            <h3>Sign in to your Journey account to report road hazards!</h3>
             <form method="POST">
                 <input placeholder="Username" name="username"><br><br>
                 <input placeholder="Password" name="password" type="password"><br><br>

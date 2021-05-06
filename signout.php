@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Moop - Sign In</title>
+        <title>Journey - Sign Out</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
         session_destroy(); // Destroy the session.
         ?>
         <h1>Sign Out</h1>
-        <h3>You have signed out of your Moop account!</h3>
+        <h3>You have signed out of your Journey account!</h3>
         <a class="button" href="./signin.php">Sign In</a>
         <a class="button" href="./index.php">Main Page</a>
     </body>
