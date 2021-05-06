@@ -15,8 +15,11 @@ $confirm = $_GET["confirm"];
 <html lang="en">
     <head>
         <title>Moop - Dashboard</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="./stylesheets/styles.css" rel="stylesheet">
         <link href="./stylesheets/buttons.css" rel="stylesheet">
+        <script type="text/javascript" src="./scripts/gps.js"></script>
     </head>
     <body>
         <h1>Report</h1>
@@ -48,31 +51,38 @@ $confirm = $_GET["confirm"];
         <p id="locatingnotification"><i>Obtaining location, please wait to submit</i></p>
 
         <script>
+           
             function getLocation() {
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(recordPosition);
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        var accuracy = position.coords.accuracy;
+                        updateSubmitButton(latitude, longitude, accuracy);
+                    },
+                    function error(msg) {
+                        document.getElementById('locatingnotification').innerHTML = "Error: Unable to access GPS. Please make sure location services are active and allowed.";
+                    },
+                    {
+                        maximumAge:10000,
+                        enableHighAccuracy:true,
+                        timeout:5000
+                    });
                 } else {
-                    alert("Error: Geolocation is not supported by this browser");
+                    document.getElementById('locatingnotification').innerHTML = "Error: Geolocation is not supported by this browser";
                 }
             }
         
-            function recordPosition(position) {
-                latitude = position.coords.latitude;
-                longitude = position.coords.longitude;
-                updateSubmitButton();
-            }
-
-            function updateSubmitButton() {
+            function updateSubmitButton(latitude, longitude, accuracy) {
                 link = document.getElementById('submitbutton').href; // Get the initial link value.
-                link = link + "&longitude=" + longitude + "&latitude=" + latitude; // Add the latitude and longitude to the link.
+                link = link + "&latitude=" + latitude + "&longitude=" + longitude; // Add the latitude and longitude to the link.
                 document.getElementById('submitbutton').href = link; // Set the newly created link as the href for the submit button.
                 document.getElementById('submitbutton').classList.add("lightbutton"); // Set the style of the button to appear as enabled.
                 document.getElementById('submitbutton').classList.remove("disabledlightbutton"); // Set the style of the button to appear as enabled.
-                document.getElementById('locatingnotification').innerHTML = "Location found!";
+                document.getElementById('locatingnotification').innerHTML = "Location found, accurate to within " + accuracy + " meters";
             }
 
             getLocation();
-            updateSubmitButton();
         </script>
     </body>
 </html>

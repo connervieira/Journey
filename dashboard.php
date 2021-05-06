@@ -12,6 +12,8 @@ if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signe
         <title>Moop - Dashboard</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
         <link href="./stylesheets/buttons.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>Dashboard</h1>

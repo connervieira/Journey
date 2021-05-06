@@ -3,6 +3,8 @@
     <head>
         <title>Moop - Main Page</title>
         <link href="./stylesheets/styles.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <h1>Moop</h1>
