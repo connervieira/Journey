@@ -2,9 +2,9 @@
 <?php
 session_start(); // Start a PHP session.
 if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signed in.
-    $username = $_SESSION["username"];
+    $username = $_SESSION["username"]; // Set the $username variable to the current user's username.
 } else {
-    header("Location: ./signin.php");
+    header("Location: ./signin.php"); // Redirect the user if they are not logged in.
 }
 ?>
 <html lang="en">

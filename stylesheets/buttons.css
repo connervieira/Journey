@@ -45,3 +45,25 @@
     padding: 10px;
     border-radius: 5px;
 }
+
+
+.darkbutton {
+    background: #111111;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.lightbutton {
+    background: #dddddd;
+    color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.disabledlightbutton {
+    background: #666666;
+    color: #999999;
+    padding: 20px;
+    border-radius: 5px;
+}

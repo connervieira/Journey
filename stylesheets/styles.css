@@ -11,6 +11,10 @@ a {
     text-decoration: underline;
 }
 
+i {
+    color: #bbbbbb;
+}
+
 .button {
     background: #666666;
     padding: 10px;

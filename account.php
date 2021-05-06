@@ -25,12 +25,6 @@ if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signe
                 latitude = position.coords.latitude;
                 longitude = position.coords.longitude;
             }
-
-            function showPosition() {
-                document.getElementById("locationtext").innerHTML = latitude + ", " + longitude;
-                maplink = "https://www.openstreetmap.org/#map=16/" + latitude + "/" + longitude;
-                document.getElementById("locationlink").href = maplink;
-            }
         </script>
     </head>
     <body>
