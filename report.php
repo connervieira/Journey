@@ -11,6 +11,9 @@ if (isset($_SESSION['loggedin'])) { // Check to see if the user is already signe
 $hazard = $_GET["hazard"];
 $confirm = $_GET["confirm"];
 
+
+include("./utils.php"); // Include the script containing various useful utilities that may be needed.
+
 ?>
 <html lang="en">
     <head>
